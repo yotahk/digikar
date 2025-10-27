@@ -1,0 +1,23 @@
+# Runbook
+
+## Initial setup
+
+https://issues.chromium.org/issues/417456892#comment9
+
+&"C:\Program Files\Google\Chrome\Application\141.0.7390.123\Installer\setup.exe" --register-chrome-browser='C:\Users\baba\Desktop\digikar\.chrome\chrome-win64\chrome-win64\chrome.exe'
+
+## To run
+
+Run chrome with your profile
+
+&"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --profile-directory='C:\Users\baba\AppData\Local\Google\Chrome\User Data\Default' --user-data-dir='C:\Users\baba\AppData\Local\Google\Chrome\User Data'
+
+Run the script:
+
+uv run main.py --browser chromium --profile-dir='C:\Users\baba\AppData\Local\Google\Chrome\User Data\Default' --user-data-dir 'C:\Users\baba\AppData\Local\Google\Chrome\User Data'
+
+## Debugging
+
+To see processes using port
+
+netstat -aon | Select-String -Pattern ".*9222.*"

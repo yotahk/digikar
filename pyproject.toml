@@ -1,0 +1,9 @@
+[project]
+name = "digikar"
+version = "0.1.0"
+description = "Automation script for digikar"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+	"playwright>=1.40.0",
+]
